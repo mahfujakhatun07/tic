@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#3B6064"
+    android:padding="16dp">
+
+    <!-- Top section with Undo and Redo buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="20dp">
+
+        <!-- Undo button -->
+        <Button
+            android:id="@+id/undoBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Undo"
+            android:backgroundTint="#191913"
+            android:textColor="#ffffff"
+            android:padding="12dp"
+            android:layout_marginEnd="10dp"
+            android:textSize="18sp"/>
+
+        <!-- Redo button -->
+        <Button
+            android:id="@+id/redoBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Redo"
+            android:backgroundTint="#191913"
+            android:textColor="#ffffff"
+            android:padding="12dp"
+            android:layout_marginStart="10dp"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+    <!-- Message container for displaying the winner -->
+    <TextView
+        android:id="@+id/msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Winner"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="#ffffc7"
+        android:visibility="gone"
+        android:layout_marginBottom="20dp"/>
+
+    <!-- Game board using GridLayout -->
+    <GridLayout
+        android:id="@+id/gameBoard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rowCount="3"
+        android:columnCount="3"
+        android:layout_marginBottom="20dp">
+
+        <Button
+            android:id="@+id/button1"
+            style="@style/GameButtonStyle"/>
+        <Button
+            android:id="@+id/button2"
+            style="@style/GameButtonStyle"/>
+        <Button
+            android:id="@+id/button3"
+            style="@style/GameButtonStyle"/>
+        <Button
+            android:id="@+id/button4"
+            style="@style/GameButtonStyle"/>
+        <Button
+            android:id="@+id/button5"
+            style="@style/GameButtonStyle"/>
+        <Button
+            android:id="@+id/button6"
+            style="@style/GameButtonStyle"/>
+        <Button
+            android:id="@+id/button7"
+            style="@style/GameButtonStyle"/>
+        <Button
+            android:id="@+id/button8"
+            style="@style/GameButtonStyle"/>
+        <Button
+            android:id="@+id/button9"
+            style="@style/GameButtonStyle"/>
+    </GridLayout>
+
+    <!-- Reset Game button -->
+    <Button
+        android:id="@+id/resetBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset Game"
+        android:backgroundTint="#191913"
+        android:textColor="#ffffff"
+        android:padding="12dp"
+        android:layout_marginTop="20dp"
+        android:textSize="18sp"/>
+
+</LinearLayout>
